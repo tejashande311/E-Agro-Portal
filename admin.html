@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - E-Agro Portal</title>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="products-page">
+        <header class="product-header">
+            <h1><i class="fas fa-user-shield"></i> Admin Dashboard</h1>
+            <div class="user-info">
+                <i class="fas fa-user-circle"></i> <span id="adminName">Admin</span>
+                <button id="logoutBtn" class="logout-small"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </header>
+
+        <div class="admin-section">
+            <h3><i class="fas fa-plus-circle"></i> Upload New Product</h3>
+            <form id="uploadForm" class="upload-form">
+                <div class="form-grid">
+                    <input type="text" id="pName" placeholder="Product Name" required>
+                    <input type="text" id="pPrice" placeholder="Price (e.g. ₹50/kg)" required>
+                    <input type="text" id="pImg" placeholder="Image URL">
+                    <input type="text" id="pDesc" placeholder="Short Description">
+                    <input type="text" id="pOrigin" placeholder="Origin (e.g. Punjab)">
+                    <button type="submit" class="btn-primary"><i class="fas fa-cloud-upload-alt"></i> Post Product</button>
+                </div>
+            </form>
+        </div>
+
+        <h2><i class="fas fa-boxes"></i> All Products</h2>
+        <div class="product-grid" id="adminProductGrid"></div>
+
+        <button id="backToProducts" class="btn-primary back-btn"><i class="fas fa-arrow-left"></i> Back to Marketplace</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
